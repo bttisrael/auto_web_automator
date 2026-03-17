@@ -1,610 +1,682 @@
 {
   "url": "https://dadosabertos.curitiba.pr.gov.br/",
-  "task": "quero baixar todos os csv's do site",
-  "static": {
+  "task": "Quero baixar todos os csv's do site",
+  "camada1_estatico": {
+    "title": "P\u00e1gina Inicial - Dados Abertos",
+    "total_links": 33,
+    "links_navegacao": [
+      {
+        "texto": "/dadosabertos",
+        "href": "/",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['navbar-brand']"
+      },
+      {
+        "texto": "In\u00edcio",
+        "href": "/",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['nav-link']"
+      },
+      {
+        "texto": "Conjuntos de Dados",
+        "href": "/conjuntodado",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['nav-link']"
+      },
+      {
+        "texto": "Canal de D\u00favidas",
+        "href": "/canalduvidas",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['nav-link']"
+      },
+      {
+        "texto": "Sobre a Pol\u00edtica",
+        "href": "/sobreapolitica",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['nav-link']"
+      },
+      {
+        "texto": "Login",
+        "href": "/ecidadao/entrar/",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['nav-link', 'nav-item-borda']"
+      },
+      {
+        "texto": "",
+        "href": "https://conecta.curitiba.pr.gov.br/consulta-publica---dados-abertos/login",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Clique EconomiaSMSANBase de dados do Programa \"Clique Economia\". Este sistema",
+        "href": "/conjuntodado/detalhe/?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Sistema Integrado de Atendimento ao Cidad\u00e3o - SIAC 156SGMBase de Dados conten",
+        "href": "/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Base de Alvar\u00e1sSMFRela\u00e7\u00e3o de alvar\u00e1s para libera\u00e7\u00e3o de atividades comercias e",
+        "href": "/conjuntodado/detalhe/?chave=be211e1f-cff5-44cb-9aaa-1be6b9ec3811",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Base de receitas e despesasSMFReceitas: Todos os recursos financeiros que a P",
+        "href": "/conjuntodado/detalhe/?chave=5ddffbe8-313b-4d94-a862-73ab74b3817c",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Rela\u00e7\u00f5es de servidores, cargos e encargosSMGPRela\u00e7\u00e3o de dados financeiros e f",
+        "href": "/conjuntodado/detalhe/?chave=cb9cbeb2-1c2c-48ba-a632-25edcb766744",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "(5)Unidades de Atendimento de Curitiba - AtivasIPPUCBase com as unidades de aten",
+        "href": "/conjuntodado/detalhe/?chave=680ed5ed-c8b7-4e81-a2af-637d2757027a",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "Veja Mais",
+        "href": "/ConjuntoDado",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['btn', 'btnSecundario', 'float-end', 'mx-3']"
+      },
+      {
+        "texto": "O que s\u00e3o Dados Abertos?",
+        "href": "/informacoes/dadosabertos/7",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "Tutorial de uso da Plataforma",
+        "href": "/informacoes/tutorial",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "Regras de utiliza\u00e7\u00e3o",
+        "href": "/informacoes/regrasutilizacao/5",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "Perguntas frequentes",
+        "href": "/informacoes/perguntasfrequentes",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      },
+      {
+        "texto": "Veja Mais",
+        "href": "/Informacoes",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": "['btn', 'btnSecundario', 'float-end']"
+      },
+      {
+        "texto": "Fechar",
+        "href": "javascript:void(0);",
+        "tipo": "navegacao",
+        "extensao": "",
+        "id": "",
+        "class": ""
+      }
+    ],
+    "links_download": [],
     "forms": [
       {
         "action": "/conjuntodado/",
         "method": "post",
         "id": "",
-        "class": [
-          "col-12",
-          "busca"
-        ],
         "inputs": [
           {
             "tag": "input",
             "type": "text",
             "name": "termo",
             "id": "",
-            "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
-            "class": [
-              "form-control",
-              "form-control-lg"
-            ],
-            "required": false
+            "placeholder": "Pesquise bases de dados, nome de autores e outros mais"
           },
           {
             "tag": "input",
             "type": "hidden",
             "name": "__RequestVerificationToken",
             "id": "",
-            "placeholder": "",
-            "class": [],
-            "required": false
+            "placeholder": ""
           }
         ]
       }
     ],
-    "buttons": [
-      {
-        "tag": "button",
-        "type": "button",
-        "text": "",
-        "id": "",
-        "class": [
-          "navbar-toggler"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "submit",
-        "text": "Buscar",
-        "id": "",
-        "class": [
-          "btn",
-          "ms-3",
-          "px-5",
-          "form-control-lg"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "",
-        "id": "",
-        "class": [
-          "closeTut"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Pular tutorial",
-        "id": "",
-        "class": [
-          "btn",
-          "btn-outline-success"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Pr\u00f3ximo",
-        "id": "",
-        "class": [
-          "btn",
-          "ms-2"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "",
-        "id": "",
-        "class": [
-          "closeTut"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Voltar",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Pr\u00f3ximo",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "",
-        "id": "",
-        "class": [
-          "closeTut"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Voltar",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Pr\u00f3ximo",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "",
-        "id": "",
-        "class": [
-          "closeTut"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Voltar",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Pr\u00f3ximo",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "",
-        "id": "",
-        "class": [
-          "closeTut"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Voltar",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      },
-      {
-        "tag": "button",
-        "type": "",
-        "text": "Fechar",
-        "id": "",
-        "class": [
-          "btn"
-        ],
-        "name": ""
-      }
-    ],
-    "links": [
-      {
-        "text": "/dadosabertos",
-        "href": "/",
-        "id": ""
-      },
-      {
-        "text": "In\u00edcio",
-        "href": "/",
-        "id": ""
-      },
-      {
-        "text": "Conjuntos de Dados",
-        "href": "/conjuntodado",
-        "id": ""
-      },
-      {
-        "text": "Canal de D\u00favidas",
-        "href": "/canalduvidas",
-        "id": ""
-      },
-      {
-        "text": "Sobre a Pol\u00edtica",
-        "href": "/sobreapolitica",
-        "id": ""
-      },
-      {
-        "text": "Login",
-        "href": "/ecidadao/entrar/",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "https://conecta.curitiba.pr.gov.br/consulta-publica---dados-abertos/login",
-        "id": ""
-      },
-      {
-        "text": "(5)Clique EconomiaSMSANBase de dados do Programa \"Clique Eco",
-        "href": "/conjuntodado/detalhe/?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
-        "id": ""
-      },
-      {
-        "text": "(5)Sistema Integrado de Atendimento ao Cidad\u00e3o - SIAC 156SGM",
-        "href": "/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530",
-        "id": ""
-      },
-      {
-        "text": "(5)Base de Alvar\u00e1sSMFRela\u00e7\u00e3o de alvar\u00e1s para libera\u00e7\u00e3o de at",
-        "href": "/conjuntodado/detalhe/?chave=be211e1f-cff5-44cb-9aaa-1be6b9ec3811",
-        "id": ""
-      },
-      {
-        "text": "(5)Base de receitas e despesasSMFReceitas: Todos os recursos",
-        "href": "/conjuntodado/detalhe/?chave=5ddffbe8-313b-4d94-a862-73ab74b3817c",
-        "id": ""
-      },
-      {
-        "text": "(5)Rela\u00e7\u00f5es de servidores, cargos e encargosSMGPRela\u00e7\u00e3o de d",
-        "href": "/conjuntodado/detalhe/?chave=cb9cbeb2-1c2c-48ba-a632-25edcb766744",
-        "id": ""
-      },
-      {
-        "text": "(5)Unidades de Atendimento de Curitiba - AtivasIPPUCBase com",
-        "href": "/conjuntodado/detalhe/?chave=680ed5ed-c8b7-4e81-a2af-637d2757027a",
-        "id": ""
-      },
-      {
-        "text": "Veja Mais",
-        "href": "/ConjuntoDado",
-        "id": ""
-      },
-      {
-        "text": "O que s\u00e3o Dados Abertos?",
-        "href": "/informacoes/dadosabertos/7",
-        "id": ""
-      },
-      {
-        "text": "Tutorial de uso da Plataforma",
-        "href": "/informacoes/tutorial",
-        "id": ""
-      },
-      {
-        "text": "Regras de utiliza\u00e7\u00e3o",
-        "href": "/informacoes/regrasutilizacao/5",
-        "id": ""
-      },
-      {
-        "text": "Perguntas frequentes",
-        "href": "/informacoes/perguntasfrequentes",
-        "id": ""
-      },
-      {
-        "text": "Veja Mais",
-        "href": "/Informacoes",
-        "id": ""
-      },
-      {
-        "text": "Fechar",
-        "href": "javascript:void(0);",
-        "id": ""
-      },
-      {
-        "text": "Fechar",
-        "href": "javascript:void(0);",
-        "id": ""
-      },
-      {
-        "text": "Fechar",
-        "href": "javascript:void(0);",
-        "id": ""
-      },
-      {
-        "text": "Fechar",
-        "href": "javascript:void(0);",
-        "id": ""
-      },
-      {
-        "text": "Fechar",
-        "href": "javascript:void(0);",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "//facebook.com/PrefsCuritiba/",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "//twitter.com/curitiba_pmc/",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "//instagram.com/curitiba_pmc/",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "//youtube.com/channel/UCmRMAq8g3xlCsauCZpzYGgg",
-        "id": ""
-      },
-      {
-        "text": "",
-        "href": "//open.spotify.com/user/1vl2d2e3vvwrv28xsgub8ydiy/",
-        "id": ""
-      }
-    ],
-    "all_inputs": [
-      {
-        "tag": "input",
-        "type": "text",
-        "name": "termo",
-        "id": "",
-        "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
-        "class": "['form-control', 'form-control-lg']"
-      },
-      {
-        "tag": "input",
-        "type": "hidden",
-        "name": "__RequestVerificationToken",
-        "id": "",
-        "placeholder": "",
-        "class": ""
-      },
-      {
-        "tag": "input",
-        "type": "checkbox",
-        "name": "chkNaoMostrarTutorial",
-        "id": "chkNaoMostrarTutorial",
-        "placeholder": "",
-        "class": "['chkNaoMostrarTutorial']"
-      },
-      {
-        "tag": "input",
-        "type": "checkbox",
-        "name": "chkNaoMostrarTutorial",
-        "id": "chkNaoMostrarTutorial",
-        "placeholder": "",
-        "class": "['chkNaoMostrarTutorial']"
-      },
-      {
-        "tag": "input",
-        "type": "checkbox",
-        "name": "chkNaoMostrarTutorial",
-        "id": "chkNaoMostrarTutorial",
-        "placeholder": "",
-        "class": "['chkNaoMostrarTutorial']"
-      },
-      {
-        "tag": "input",
-        "type": "checkbox",
-        "name": "chkNaoMostrarTutorial",
-        "id": "chkNaoMostrarTutorial",
-        "placeholder": "",
-        "class": "['chkNaoMostrarTutorial']"
-      },
-      {
-        "tag": "input",
-        "type": "checkbox",
-        "name": "chkNaoMostrarTutorial",
-        "id": "chkNaoMostrarTutorial",
-        "placeholder": "",
-        "class": "['chkNaoMostrarTutorial']"
-      }
-    ]
+    "paginacao": []
   },
-  "dynamic": {
+  "camada2_dinamico": {
     "inputs": [
       {
-        "type": "text",
+        "tipo": "INPUT/text",
         "id": "",
         "name": "termo",
         "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
         "class": "form-control form-control-lg",
-        "visible": true,
-        "aria_label": "busca",
-        "data_testid": ""
+        "aria": "busca"
       },
       {
-        "type": "checkbox",
+        "tipo": "INPUT/checkbox",
         "id": "chkNaoMostrarTutorial",
         "name": "chkNaoMostrarTutorial",
         "placeholder": "",
         "class": "chkNaoMostrarTutorial",
-        "visible": true,
-        "aria_label": "",
-        "data_testid": ""
+        "aria": ""
       }
     ],
     "buttons": [
       {
-        "text": "Contraste +",
+        "texto": "Contraste +",
         "id": "ma-contrasteItem",
         "class": "ma-item-Contraste ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Links destacados",
+        "texto": "Links destacados",
         "id": "ma-linksDestacadosItem",
         "class": "ma-item-linksDestacados ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Cursor",
+        "texto": "Cursor",
         "id": "ma-cursorItem",
         "class": "ma-item-cursor ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Barra de ferramentas",
+        "texto": "Barra de ferramentas",
         "id": "ma-barraFerramentasItem",
         "class": "ma-item-barraFerramentas ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Dislexia Amig\u00e1vel",
+        "texto": "Dislexia Amig\u00e1vel",
         "id": "ma-dislexiaItem",
         "class": "ma-item-dislexia ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Texto maior",
+        "texto": "Texto maior",
         "id": "ma-textoMaiorItem",
         "class": "ma-item-textoMaior ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Espa\u00e7amento de texto",
+        "texto": "Espa\u00e7amento de texto",
         "id": "ma-espacamentoTextoItem",
         "class": "ma-item-espacamentoTexto ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Altura da linha",
+        "texto": "Altura da linha",
         "id": "ma-alturaLinhaItem",
         "class": "ma-item-alturaLinha ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Alinhamento de\ntexto",
+        "texto": "Alinhamento de\ntexto",
         "id": "ma-alinhamentoTextoItem",
         "class": "ma-item-alinhamentoTexto ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Leitor de tela",
+        "texto": "Leitor de tela",
         "id": "ma-lerPaginaItem",
         "class": "ma-item-lerPagina ma-selected",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Reiniciar tudo",
+        "texto": "Reiniciar tudo",
         "id": "ma-btReiniciar",
         "class": "ma-fechar",
-        "type": "button",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Buscar",
+        "texto": "Buscar",
         "id": "",
         "class": "btn ms-3 px-5 form-control-lg",
-        "type": "submit",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "",
+        "texto": "Veja Mais",
+        "id": "",
+        "class": "btn btnSecundario float-end mx-3",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/ConjuntoDado",
+        "aria": "",
+        "data_id": ""
+      },
+      {
+        "texto": "Veja Mais",
+        "id": "",
+        "class": "btn btnSecundario float-end",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/Informacoes",
+        "aria": "",
+        "data_id": ""
+      },
+      {
+        "texto": "",
         "id": "",
         "class": "closeTut",
-        "type": "submit",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Pular tutorial",
+        "texto": "Pular tutorial",
         "id": "",
         "class": "btn btn-outline-success",
-        "type": "submit",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       },
       {
-        "text": "Pr\u00f3ximo",
+        "texto": "Pr\u00f3ximo",
         "id": "",
         "class": "btn ms-2",
-        "type": "submit",
-        "aria_label": "",
-        "data_testid": ""
+        "href": "",
+        "aria": "",
+        "data_id": ""
       }
     ],
-    "links": [],
+    "links_visiveis": [
+      {
+        "texto": "PREFEITURA MUNICIPAL DE CURITIBA",
+        "href": "https://www.curitiba.pr.gov.br/",
+        "class": ""
+      },
+      {
+        "texto": "CURITIBA-OUVE",
+        "href": "https://www.curitiba.pr.gov.br/lei13460/",
+        "class": ""
+      },
+      {
+        "texto": "156",
+        "href": "https://156.curitiba.pr.gov.br/",
+        "class": ""
+      },
+      {
+        "texto": "ACESSO \u00c0 INFORMA\u00c7\u00c3O",
+        "href": "https://www.curitiba.pr.gov.br/leiacessoinformacao/",
+        "class": ""
+      },
+      {
+        "texto": "SECRETARIAS",
+        "href": "https://www.curitiba.pr.gov.br/secretarias/",
+        "class": ""
+      },
+      {
+        "texto": "/dadosabertos",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/",
+        "class": "navbar-brand"
+      },
+      {
+        "texto": "In\u00edcio",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/",
+        "class": "nav-link"
+      },
+      {
+        "texto": "Conjuntos de Dados",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado",
+        "class": "nav-link"
+      },
+      {
+        "texto": "Canal de D\u00favidas",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/canalduvidas",
+        "class": "nav-link"
+      },
+      {
+        "texto": "Sobre a Pol\u00edtica",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/sobreapolitica",
+        "class": "nav-link"
+      },
+      {
+        "texto": "Login",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/ecidadao/entrar/",
+        "class": "nav-link nav-item-borda"
+      },
+      {
+        "texto": "Leitor de tela",
+        "href": "https://www.curitiba.pr.gov.br/conteudo/leitores-de-tela/3409",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nClique Economia\nSMSAN\nBase de dados do Programa \"Clique Economia\". Este sist",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nSistema Integrado de Atendimento ao Cidad\u00e3o - SIAC 156\nSGM\nBase de Dados con",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nBase de Alvar\u00e1s\nSMF\nRela\u00e7\u00e3o de alvar\u00e1s para libera\u00e7\u00e3o de atividades comercia",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=be211e1f-cff5-44cb-9aaa-1be6b9ec3811",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nBase de receitas e despesas\nSMF\nReceitas: Todos os recursos financeiros que ",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=5ddffbe8-313b-4d94-a862-73ab74b3817c",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nRela\u00e7\u00f5es de servidores, cargos e encargos\nSMGP\nRela\u00e7\u00e3o de dados financeiros ",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=cb9cbeb2-1c2c-48ba-a632-25edcb766744",
+        "class": ""
+      },
+      {
+        "texto": "(5)\nUnidades de Atendimento de Curitiba - Ativas\nIPPUC\nBase com as unidades de a",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=680ed5ed-c8b7-4e81-a2af-637d2757027a",
+        "class": ""
+      },
+      {
+        "texto": "Veja Mais",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/ConjuntoDado",
+        "class": "btn btnSecundario float-end mx-3"
+      },
+      {
+        "texto": "O que s\u00e3o Dados Abertos?",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/informacoes/dadosabertos/7",
+        "class": ""
+      },
+      {
+        "texto": "Tutorial de uso da Plataforma",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/informacoes/tutorial",
+        "class": ""
+      },
+      {
+        "texto": "Regras de utiliza\u00e7\u00e3o",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/informacoes/regrasutilizacao/5",
+        "class": ""
+      },
+      {
+        "texto": "Perguntas frequentes",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/informacoes/perguntasfrequentes",
+        "class": ""
+      },
+      {
+        "texto": "Veja Mais",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/Informacoes",
+        "class": "btn btnSecundario float-end"
+      },
+      {
+        "texto": "Instituto das Cidades Inteligentes",
+        "href": "https://www.ici.curitiba.org.br/",
+        "class": ""
+      }
+    ],
     "selects": [],
-    "iframes": [],
-    "modals": [],
-    "page_title": "P\u00e1gina Inicial - Dados Abertos",
+    "tabelas": [],
+    "paginacao": [],
+    "cards_dataset": [
+      {
+        "texto": "In\u00edcio",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/",
+        "class": "nav-item"
+      },
+      {
+        "texto": "Conjuntos de Dados",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado",
+        "class": "nav-item"
+      },
+      {
+        "texto": "Canal de D\u00favidas",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/canalduvidas",
+        "class": "nav-item"
+      },
+      {
+        "texto": "Sobre a Pol\u00edtica",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/sobreapolitica",
+        "class": "nav-item"
+      },
+      {
+        "texto": "Leitor de tela",
+        "href": "https://www.curitiba.pr.gov.br/conteudo/leitores-de-tela/3409",
+        "class": "ma-item-lerPagina ma-selected"
+      },
+      {
+        "texto": "(5)\nClique Economia\nSMSAN\nBase de dados do Programa \"Clique Economia\". Este sistema viabiliza o serv",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+        "class": "cardsContent"
+      },
+      {
+        "texto": "(5)\nSistema Integrado de Atendimento ao Cidad\u00e3o - SIAC 156\nSGM\nBase de Dados contendo as solicita\u00e7\u00f5e",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530",
+        "class": "cardsContent"
+      },
+      {
+        "texto": "(5)\nBase de Alvar\u00e1s\nSMF\nRela\u00e7\u00e3o de alvar\u00e1s para libera\u00e7\u00e3o de atividades comercias e edifica\u00e7\u00f5es dent",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=be211e1f-cff5-44cb-9aaa-1be6b9ec3811",
+        "class": "cardsContent"
+      },
+      {
+        "texto": "(5)\nBase de receitas e despesas\nSMF\nReceitas: Todos os recursos financeiros que a Prefeitura recebe.",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=5ddffbe8-313b-4d94-a862-73ab74b3817c",
+        "class": "cardsContent"
+      },
+      {
+        "texto": "(5)\nRela\u00e7\u00f5es de servidores, cargos e encargos\nSMGP\nRela\u00e7\u00e3o de dados financeiros e funcionais do m\u00eas ",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=cb9cbeb2-1c2c-48ba-a632-25edcb766744",
+        "class": "cardsContent"
+      },
+      {
+        "texto": "(5)\nUnidades de Atendimento de Curitiba - Ativas\nIPPUC\nBase com as unidades de atendimento de uso p\u00fa",
+        "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=680ed5ed-c8b7-4e81-a2af-637d2757027a",
+        "class": "cardsContent"
+      }
+    ],
     "url_atual": "https://dadosabertos.curitiba.pr.gov.br/"
   },
+  "camada3_subpaginas": [
+    {
+      "url": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado",
+      "info": {
+        "title": "Lista do Conjunto de Dados - Dados Abertos",
+        "url": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado",
+        "botoes_download": [
+          {
+            "texto": "(5)\nClique Economia\nSecretaria Municipal de Seguran\u00e7a Alimentar e Nutricional\nBa",
+            "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+            "class": "",
+            "tag": "A"
+          },
+          {
+            "texto": "(5)\nFala Curitiba\nInstituto Municipal de Administra\u00e7\u00e3o P\u00fablica\nBase de dados das",
+            "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe?chave=540868f2-e7ba-4338-b5b3-9413e8b83311",
+            "class": "",
+            "tag": "A"
+          }
+        ],
+        "links_arquivo": [],
+        "textos_relevantes": [
+          "Acessibilidade",
+          "Conjunto de Dados",
+          "Carregando, aguarde...",
+          "Assist\u00eancia Financeira Complementar Do Piso Salarial Da Enfermagem",
+          "Saldos Or\u00e7amentarios",
+          "Clique Economia",
+          "Casos de Dengue em Curitiba",
+          "Fala Curitiba",
+          "Detalhe do conjunto de dados"
+        ],
+        "requests_rede": []
+      },
+      "screenshot": "C:\\Users\\israb\\Documents\\Agente_RPA\\screenshot_sub_1.png"
+    },
+    {
+      "url": "https://dadosabertos.curitiba.pr.gov.br/canalduvidas",
+      "info": {
+        "title": "Contato - Dados Abertos",
+        "url": "https://dadosabertos.curitiba.pr.gov.br/canalduvidas",
+        "botoes_download": [],
+        "links_arquivo": [],
+        "textos_relevantes": [
+          "Acessibilidade",
+          "Precisando de ajuda?",
+          "No que podemos te ajudar"
+        ],
+        "requests_rede": []
+      },
+      "screenshot": "C:\\Users\\israb\\Documents\\Agente_RPA\\screenshot_sub_2.png"
+    }
+  ],
+  "rede_interceptada": [],
+  "padroes_url": [
+    [
+      "//",
+      8
+    ],
+    [
+      "/conjuntodado/",
+      7
+    ],
+    [
+      "/informacoes/",
+      4
+    ],
+    [
+      "/canalduvidas/",
+      1
+    ],
+    [
+      "/sobreapolitica/",
+      1
+    ],
+    [
+      "/ecidadao/",
+      1
+    ],
+    [
+      "/ConjuntoDado/",
+      1
+    ],
+    [
+      "/Informacoes/",
+      1
+    ]
+  ],
+  "downloads_detectados": [
+    {
+      "texto": "(5)\nClique Economia\nSecretaria Municipal de Seguran\u00e7a Alimentar e Nutricional\nBa",
+      "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+      "class": "",
+      "tag": "A",
+      "origem": "subpagina",
+      "pagina": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado"
+    },
+    {
+      "texto": "(5)\nFala Curitiba\nInstituto Municipal de Administra\u00e7\u00e3o P\u00fablica\nBase de dados das",
+      "href": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe?chave=540868f2-e7ba-4338-b5b3-9413e8b83311",
+      "class": "",
+      "tag": "A",
+      "origem": "subpagina",
+      "pagina": "https://dadosabertos.curitiba.pr.gov.br/conjuntodado"
+    }
+  ],
   "metadata": {
-    "title": "P\u00e1gina Inicial - Dados Abertos",
-    "description": "",
     "tecnologias": [
       "jquery",
       "bootstrap"
-    ],
-    "screenshot": "C:\\Users\\israb\\Documents\\Agente_RPA\\page_screenshot.png",
-    "url_final": "https://dadosabertos.curitiba.pr.gov.br/"
+    ]
   },
-  "ia_analise": {
+  "plano_ia": {
     "biblioteca_recomendada": "playwright",
-    "justificativa": "Playwright \u00e9 superior para este caso pois o site utiliza jQuery e Bootstrap com conte\u00fado din\u00e2mico. Possui melhor suporte para esperar elementos carregados via JS, intercepta\u00e7\u00e3o de requisi\u00e7\u00f5es de rede para capturar URLs dos CSVs, e \u00e9 mais est\u00e1vel para download de m\u00faltiplos arquivos",
-    "estrategia": "1) Acessar a p\u00e1gina principal e aguardar carregamento completo; 2) Identificar todos os conjuntos de dados atrav\u00e9s de links ou cards na p\u00e1gina; 3) Para cada conjunto, acessar a p\u00e1gina de detalhes; 4) Localizar e extrair URLs dos arquivos CSV (podem estar em bot\u00f5es de download ou links diretos); 5) Implementar loop para navegar por todas as p\u00e1ginas de datasets se houver pagina\u00e7\u00e3o; 6) Realizar download program\u00e1tico dos CSVs ou coletar URLs e baixar via requests; 7) Organizar arquivos baixados com nomenclatura apropriada",
-    "elementos_chave": [
-      "form.busca[action='/conjuntodado/']",
-      "input[name='termo']",
-      "a[href*='csv'], button[download], a[download]",
-      "links para p\u00e1ginas de datasets individuais",
-      "elementos de pagina\u00e7\u00e3o (se existirem)",
-      "bot\u00f5es ou links com texto 'Download', 'CSV', 'Baixar'"
+    "justificativa": "O site usa jQuery e Bootstrap com carregamento din\u00e2mico de conte\u00fado. Os links de datasets levam a p\u00e1ginas de detalhe (/conjuntodado/detalhe?chave=...) onde provavelmente est\u00e3o os downloads reais dos CSVs. Playwright \u00e9 necess\u00e1rio para navegar pela estrutura de p\u00e1ginas e aguardar carregamentos din\u00e2micos.",
+    "fluxo_navegacao": [
+      "Passo 1: Acessar https://dadosabertos.curitiba.pr.gov.br/conjuntodado para listar todos os conjuntos de dados",
+      "Passo 2: Extrair todos os links com padr\u00e3o /conjuntodado/detalhe?chave= que levam \u00e0s p\u00e1ginas individuais de cada dataset",
+      "Passo 3: Para cada p\u00e1gina de detalhe, identificar e clicar nos bot\u00f5es/links de download de CSV (provavelmente m\u00faltiplos arquivos por dataset, como indicado pelo '(5)' no texto)",
+      "Passo 4: Se houver pagina\u00e7\u00e3o na lista principal (/conjuntodado), navegar por todas as p\u00e1ginas repetindo os passos 2-3",
+      "Passo 5: Aguardar conclus\u00e3o de cada download antes de prosseguir para o pr\u00f3ximo"
     ],
+    "seletores_chave": {
+      "lista_datasets": "a[href*='/conjuntodado/detalhe?chave=']",
+      "botao_download": "a[href$='.csv'], a[download], button:has-text('Download'), a:has-text('CSV')",
+      "paginacao_proxima": ".pagination .next, a[aria-label='Pr\u00f3xima'], button:has-text('Pr\u00f3xima')",
+      "campo_busca": "input[type='search'], input[type='text'][placeholder*='usca']"
+    },
+    "estrategia_download": "Navegar para cada p\u00e1gina de detalhe do dataset e identificar links diretos para arquivos CSV ou bot\u00f5es de download. Usar page.on('download') do Playwright para capturar os downloads ou extrair URLs diretas dos links .csv",
+    "url_api_download": "",
+    "tem_paginacao": true,
     "alertas": [
-      "Pagina\u00e7\u00e3o din\u00e2mica pode exigir cliques ou scroll infinito",
-      "CSVs podem estar dentro de p\u00e1ginas de detalhes individuais, n\u00e3o na listagem principal",
-      "Poss\u00edvel limite de rate limiting para m\u00faltiplos downloads",
-      "Arquivos podem ter nomes gen\u00e9ricos, necessitando renomea\u00e7\u00e3o baseada em metadados",
-      "Token CSRF presente (__RequestVerificationToken) pode ser necess\u00e1rio para algumas intera\u00e7\u00f5es"
+      "A lista de DOWNLOADS DETECTADOS mostra apenas 2 itens - pode haver pagina\u00e7\u00e3o n\u00e3o detectada na an\u00e1lise est\u00e1tica",
+      "O n\u00famero '(5)' nos textos sugere que cada dataset pode ter m\u00faltiplos arquivos CSV",
+      "Necess\u00e1rio explorar as p\u00e1ginas de detalhe para encontrar os links reais de download dos CSVs",
+      "Pode haver rate limiting - implementar delays entre requisi\u00e7\u00f5es",
+      "Verificar se os downloads requerem aceitar termos de uso ou captcha"
     ],
-    "complexidade": "media"
+    "complexidade": "media",
+    "pasta_download": "./downloads/curitiba_dados_abertos/"
   }
 }
