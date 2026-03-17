@@ -1,7 +1,12 @@
 {
-  "passou": true,
-  "tentativas": 2,
-  "healing_count": 1,
-  "ultimo_output": "OK",
-  "library": "playwright"
+  "passou": false,
+  "tentativas": 3,
+  "healing_count": 2,
+  "arquivos_baixados": [],
+  "total_arquivos": 0,
+  "ultimo_output": "Passo 1: Acessando URL alvo...\nPasso 2: Fechando modal de boas-vindas...\nModal fechado com seletor: button:has-text('Pular tutorial')\nPasso 3: Navegando para 'Conjuntos de Dados'...\nMenu clicado com get_by_role\nPasso 4: Coletando links dos datasets...\n\n--- Processando p\u00e1gina 1 ---\nEncontrados 5 datasets nesta p\u00e1gina\n\nProcessando dataset 1/5: https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe?chave=a375fff2-03b4-4ab8-8fcd-89d237ad0d7e\nErro ao processar dataset 1: 'charmap' codec can't e",
+  "screenshots_analisados": [
+    "home",
+    "subpagina_1"
+  ]
 }

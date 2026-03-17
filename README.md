@@ -1,71 +1,80 @@
-# 🤖 Automação de Download - Dados Abertos Curitiba
+# 🤖 Curitiba Open Data Downloader
 
-Automação web desenvolvida com **Playwright** para download massivo de todos os arquivos CSV disponíveis no portal de Dados Abertos da Prefeitura de Curitiba.
+Automação web para download em massa de todos os arquivos CSV disponíveis no Portal de Dados Abertos de Curitiba.
 
 ## 📋 Descrição
 
-Este script navega automaticamente pelo site [dadosabertos.curitiba.pr.gov.br](https://dadosabertos.curitiba.pr.gov.br/), identifica todos os conjuntos de dados disponíveis, acessa cada página de detalhe e realiza o download de todos os arquivos CSV encontrados.
+Este projeto automatiza o processo de navegação e download de datasets no portal [dadosabertos.curitiba.pr.gov.br](https://dadosabertos.curitiba.pr.gov.br/), coletando sistematicamente todos os arquivos CSV disponíveis. Utilizando Playwright com capacidades de visão computacional, o sistema navega autonomamente pelo portal, identifica conjuntos de dados e realiza downloads de forma estruturada.
 
-## 🔧 Pré-requisitos
+## ✅ Pré-requisitos
 
 - Python 3.8 ou superior
 - Playwright
 - Conexão estável com a internet
-- Espaço em disco para armazenamento dos arquivos CSV
+- Aproximadamente 2GB de espaço em disco (varia conforme datasets disponíveis)
 
-## 📦 Instalação
+## 🔧 Instalação
 
 ```bash
 # Clone o repositório
 git clone <seu-repositorio>
-cd <diretorio-do-projeto>
+cd curitiba-opendata-downloader
 
 # Instale as dependências
 pip install playwright
-
-# Instale o navegador Chromium
 playwright install chromium
+
+# Execute o script
+python main.py
 ```
 
 ## 🚀 Como Usar
 
+Execute o script principal:
+
 ```bash
-python automation.py
+python main.py
 ```
 
-Os arquivos CSV serão salvos automaticamente no diretório `downloads/` na raiz do projeto.
+O sistema irá:
+1. Acessar o portal automaticamente
+2. Navegar por todas as páginas de datasets
+3. Baixar cada arquivo CSV encontrado
+4. Salvar os arquivos na pasta `./downloads/`
+5. Gerar um log de operações em `download_log.txt`
 
-## ✅ Resultado Esperado
+## 📊 Resultado Esperado
 
-- **Navegação automática** por todas as páginas de conjuntos de dados
-- **Download completo** de todos os arquivos CSV disponíveis
-- **Logs detalhados** do progresso da execução
-- **Organização** dos arquivos por dataset no diretório de downloads
+- **Pasta downloads/**: Todos os arquivos CSV organizados
+- **download_log.txt**: Registro detalhado com:
+  - Total de datasets processados
+  - Arquivos baixados com sucesso
+  - Erros ou falhas encontradas
+  - Timestamp de cada operação
 
-## 📁 Estrutura do Projeto
+## ⚙️ Como Funciona
 
-```
-.
-├── automation.py          # Script principal
-├── downloads/             # Diretório de arquivos baixados
-├── README.md             # Documentação
-└── requirements.txt      # Dependências Python
-```
+O sistema utiliza uma abordagem híbrida de automação:
 
-## ⚠️ Limitações Conhecidas
+1. **Navegação Inteligente**: Fecha modais automaticamente e navega pela estrutura do portal
+2. **Extração de Dados**: Identifica links de datasets através de padrões específicos (`/conjuntodado/detalhe?chave=`)
+3. **Paginação Automática**: Calcula e percorre todas as páginas de resultados
+4. **Visão Computacional**: Implementa **self-healing** visual com 2 correções automáticas para lidar com mudanças na interface, garantindo robustez mesmo com alterações no layout
+5. **Download Gerenciado**: Identifica e baixa todos os CSV de cada dataset
 
-- **Rate Limiting**: O script implementa delays entre requisições para evitar sobrecarga no servidor
-- **Paginação**: Múltiplas páginas são navegadas automaticamente
-- **Datasets com múltiplos arquivos**: Cada conjunto pode conter vários CSVs (ex: 5 arquivos por dataset)
-- **Termos de uso**: Verifique se há necessidade de aceitar termos antes do download
-- **Self-healing**: Sistema com 1 correção automática aplicada para maior robustez
+## ⚠️ Limitações
 
-## 📊 Status
+- **Taxa de sucesso atual**: Em desenvolvimento (últimos testes não finalizaram completamente)
+- **Dependência de estrutura**: Mudanças significativas no portal podem requerer ajustes
+- **Tempo de execução**: Pode levar várias horas dependendo do volume de dados
+- **Rate limiting**: Não implementado - pode ser bloqueado por requisições excessivas
+- **Validação de arquivos**: Não verifica integridade dos CSV baixados
+- **Formatos alternativos**: Baixa apenas CSV, ignorando XLS, JSON ou outros formatos
 
-- ✅ Testes passando
-- ✅ Self-healing ativo
-- ⚠️ Downloads detectados: verificar volume total após execução completa
+## 📝 Licença
 
-## 📄 Licença
+MIT License - Sinta-se livre para usar e modificar.
 
-Este projeto é fornecido como está, para fins educacionais e de automação pessoal. Respeite os termos de uso do portal de Dados Abertos de Curitiba.
+---
+
+**Nota**: Este é um projeto educacional. Respeite os termos de uso do portal e utilize com responsabilidade.

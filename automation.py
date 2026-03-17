@@ -1,199 +1,194 @@
 """
-Automacao gerada por Auto Web Automator v1
+Auto Web Automator v3 — Vision-Powered
 URL: https://dadosabertos.curitiba.pr.gov.br/
-Tarefa: quero baixar todos os csv's do site
-Biblioteca: playwright
+Tarefa: preciso baixar todos os csv's desse site
 """
 
-from playwright.sync_api import sync_playwright
-import time
 import os
-import re
+import time
+from pathlib import Path
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
-def sanitize_filename(name):
-    name = re.sub(r'[<>:"/\\|?*]', '_', name)
-    name = name.strip()
-    return name[:200] if len(name) > 200 else name
+downloads_dir = r"C:\Users\israb\Documents\Agente_RPA\automation_project\downloads"
+Path(downloads_dir).mkdir(parents=True, exist_ok=True)
 
-def download_all_csvs():
+def main():
+    total_downloads = 0
+    datasets_processados = []
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
-        context = browser.new_context(
-            accept_downloads=True,
-            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        )
+        context = browser.new_context(accept_downloads=True)
         page = context.new_page()
+        page.set_default_timeout(60000)
 
-        download_dir = "downloads_csvs"
-        os.makedirs(download_dir, exist_ok=True)
+        print("Passo 1: Acessando URL alvo...")
+        page.goto("https://dadosabertos.curitiba.pr.gov.br/", wait_until='networkidle')
+        time.sleep(3)
 
+        print("Passo 2: Fechando modal de boas-vindas...")
         try:
-            print("Acessando página principal...")
-            page.goto("https://dadosabertos.curitiba.pr.gov.br/", timeout=60000)
-            page.wait_for_load_state("networkidle")
-            time.sleep(3)
-
-            print("Navegando para página de conjuntos de dados...")
-            page.goto("https://dadosabertos.curitiba.pr.gov.br/conjuntodado", timeout=60000)
-            page.wait_for_load_state("networkidle")
-            time.sleep(3)
-
-            dataset_links = []
-            page_num = 1
-
-            print("Coletando links de todos os datasets...")
-            while True:
-                print(f"Processando página {page_num}...")
-
+            modal_selectors = [
+                "button:has-text('Pular tutorial')",
+                "button.close",
+                ".modal button[aria-label='Close']",
+                "button:has-text('×')",
+                ".btn:has-text('Pular')",
+                ".introjs-skipbutton"
+            ]
+            for selector in modal_selectors:
                 try:
-                    page.wait_for_selector("div.card, div.dataset-item, a[href*='/conjuntodado/'], a", timeout=30000, state="visible")
-                    time.sleep(2)
-                except:
-                    print("Timeout esperando seletores, tentando continuar...")
-
-                links = page.query_selector_all("a")
-
-                found_links = []
-                for link in links:
-                    href = link.get_attribute("href")
-                    if href and '/conjuntodado/detalhe/' in href:
-                        found_links.append(link)
-
-                print(f"Encontrados {len(found_links)} links na página {page_num}")
-
-                for link in found_links:
-                    href = link.get_attribute("href")
-                    if href and href not in dataset_links:
-                        full_url = f"https://dadosabertos.curitiba.pr.gov.br{href}" if href.startswith("/") else href
-                        dataset_links.append(full_url)
-
-                next_button = page.query_selector("a[aria-label='Next']:not(.disabled)")
-                if not next_button:
-                    next_button = page.query_selector("a.page-link:has-text('›'):not(.disabled)")
-                if not next_button:
-                    next_button = page.query_selector("li.page-item:not(.disabled) a:has-text('Próxima')")
-                if not next_button:
-                    next_button = page.query_selector("a:has-text('Próxima'):not(.disabled)")
-
-                if next_button:
-                    try:
-                        next_button.click()
-                        page.wait_for_load_state("networkidle")
-                        time.sleep(3)
-                        page_num += 1
-                    except:
-                        print("Não há mais páginas ou erro ao navegar")
+                    if page.locator(selector).count() > 0:
+                        page.locator(selector).first.click(timeout=5000)
+                        print(f"Modal fechado com seletor: {selector}")
+                        time.sleep(2)
                         break
-                else:
-                    print("Não encontrado botão de próxima página")
-                    break
+                except:
+                    continue
+        except Exception as e:
+            print(f"Nenhum modal encontrado ou erro ao fechar: {e}")
 
-            print(f"\nTotal de datasets encontrados: {len(dataset_links)}")
+        print("Passo 3: Navegando para 'Conjuntos de Dados'...")
+        try:
+            page.get_by_role("link", name="Conjuntos de Dados").click(timeout=10000)
+            print("Menu clicado com get_by_role")
+        except:
+            try:
+                page.locator("a[href*='conjuntos']").first.click(timeout=10000)
+                print("Menu clicado com locator href")
+            except:
+                print("Navegando diretamente para página de conjuntos...")
+                page.goto("https://dadosabertos.curitiba.pr.gov.br/conjuntodado", wait_until='networkidle')
 
-            csv_downloads = []
+        page.wait_for_load_state('networkidle')
+        time.sleep(3)
 
-            for idx, dataset_url in enumerate(dataset_links, 1):
-                print(f"\n[{idx}/{len(dataset_links)}] Acessando dataset: {dataset_url}")
+        print("Passo 4: Coletando links dos datasets...")
+        page_number = 1
 
+        while True:
+            print(f"\n--- Processando página {page_number} ---")
+            page.wait_for_load_state('networkidle')
+            time.sleep(2)
+
+            # Coletar todos os links de datasets na página atual
+            dataset_links = page.locator("a[href*='conjuntodado/detalhe?chave=']").all()
+            print(f"Encontrados {len(dataset_links)} datasets nesta página")
+
+            if len(dataset_links) == 0:
+                print("Nenhum dataset encontrado, finalizando...")
+                break
+
+            # Processar cada dataset
+            for idx in range(len(dataset_links)):
                 try:
-                    page.goto(dataset_url, timeout=60000)
-                    page.wait_for_load_state("networkidle")
+                    # Re-localizar elementos para evitar stale references
+                    dataset_links = page.locator("a[href*='conjuntodado/detalhe?chave=']").all()
+                    if idx >= len(dataset_links):
+                        break
+
+                    dataset_link = dataset_links[idx]
+                    dataset_url = dataset_link.get_attribute('href')
+
+                    if dataset_url in datasets_processados:
+                        print(f"Dataset {idx+1} já processado, pulando...")
+                        continue
+
+                    print(f"\nProcessando dataset {idx+1}/{len(dataset_links)}: {dataset_url}")
+
+                    # Abrir página do dataset
+                    dataset_link.click()
+                    page.wait_for_load_state('networkidle')
                     time.sleep(2)
 
-                    dataset_title = "dataset"
-                    try:
-                        title_element = page.query_selector("h1")
-                        if not title_element:
-                            title_element = page.query_selector("h2")
-                        if not title_element:
-                            title_element = page.query_selector(".titulo, .dataset-title, .page-title")
-                        if title_element:
-                            dataset_title = sanitize_filename(title_element.inner_text().strip())
-                    except:
-                        pass
+                    # Procurar botões de download CSV
+                    csv_selectors = [
+                        "a[href$='.csv']",
+                        "a[download][href*='.csv']",
+                        "a:has-text('CSV')",
+                        "button:has-text('CSV')",
+                        "a:has-text('Baixar')",
+                        ".download-link"
+                    ]
 
-                    print(f"Dataset: {dataset_title}")
-
-                    all_links = page.query_selector_all("a")
-                    csv_links = []
-
-                    for link in all_links:
-                        href = link.get_attribute("href")
-                        text = link.inner_text().strip().lower()
-
-                        if href and ('.csv' in href.lower() or 'csv' in text or 'download' in text):
-                            csv_links.append(link)
-
-                    print(f"Encontrados {len(csv_links)} possíveis links de CSV")
-
-                    for link_idx, csv_link in enumerate(csv_links):
+                    download_realizado = False
+                    for selector in csv_selectors:
                         try:
-                            href = csv_link.get_attribute("href")
-                            text = csv_link.inner_text().strip()
-
-                            if not href:
-                                continue
-
-                            full_csv_url = f"https://dadosabertos.curitiba.pr.gov.br{href}" if href.startswith("/") else href
-
-                            print(f"  Baixando CSV {link_idx + 1}: {text[:50]}...")
-
-                            try:
-                                with page.expect_download(timeout=120000) as download_info:
-                                    csv_link.click()
+                            if page.locator(selector).count() > 0:
+                                print(f"Tentando download com seletor: {selector}")
+                                with page.expect_download(timeout=30000) as download_info:
+                                    page.locator(selector).first.click()
 
                                 download = download_info.value
-
-                                original_filename = download.suggested_filename
-                                new_filename = f"{dataset_title}_{link_idx + 1}_{original_filename}" if original_filename.endswith('.csv') else f"{dataset_title}_{link_idx + 1}.csv"
-                                filepath = os.path.join(download_dir, new_filename)
-
+                                filepath = os.path.join(downloads_dir, download.suggested_filename)
                                 download.save_as(filepath)
-                                print(f"  ✓ Salvo: {filepath}")
-                                csv_downloads.append(filepath)
-                            except:
-                                print(f"  → Tentando download direto da URL: {full_csv_url}")
-                                response = page.request.get(full_csv_url)
-                                if response.ok:
-                                    filepath = os.path.join(download_dir, f"{dataset_title}_{link_idx + 1}.csv")
-                                    with open(filepath, 'wb') as f:
-                                        f.write(response.body())
-                                    print(f"  ✓ Salvo: {filepath}")
-                                    csv_downloads.append(filepath)
-
-                            time.sleep(2)
-
+                                print(f"✓ Download salvo: {download.suggested_filename}")
+                                total_downloads += 1
+                                download_realizado = True
+                                time.sleep(1)
+                                break
                         except Exception as e:
-                            print(f"  ✗ Erro ao baixar CSV: {str(e)}")
+                            print(f"Erro com seletor {selector}: {e}")
                             continue
 
-                    if len(csv_links) == 0:
-                        print("  Nenhum CSV encontrado neste dataset")
+                    if not download_realizado:
+                        print("⚠ Nenhum CSV encontrado para download neste dataset")
+
+                    datasets_processados.append(dataset_url)
+
+                    # Voltar para listagem
+                    page.go_back(wait_until='networkidle')
+                    time.sleep(2)
 
                 except Exception as e:
-                    print(f"Erro ao processar dataset: {str(e)}")
+                    print(f"Erro ao processar dataset {idx+1}: {e}")
+                    try:
+                        page.go_back(wait_until='networkidle')
+                        time.sleep(2)
+                    except:
+                        page.goto("https://dadosabertos.curitiba.pr.gov.br/conjuntodado", wait_until='networkidle')
+                        time.sleep(2)
                     continue
 
-                time.sleep(2)
+            # Verificar se existe próxima página
+            print("\nVerificando próxima página...")
+            try:
+                next_button = None
+                pagination_selectors = [
+                    ".pagination a:has-text('Próxima')",
+                    ".pagination a[rel='next']",
+                    "button:has-text('Próxima')",
+                    "a:has-text('›')",
+                    ".next-page"
+                ]
 
-            print(f"\n{'='*60}")
-            print(f"Total de CSVs baixados: {len(csv_downloads)}")
-            print(f"Salvos em: {os.path.abspath(download_dir)}")
-            print(f"{'='*60}")
+                for selector in pagination_selectors:
+                    if page.locator(selector).count() > 0:
+                        next_button = page.locator(selector).first
+                        break
 
-            for csv_file in csv_downloads:
-                print(f"  - {csv_file}")
+                if next_button and next_button.is_visible():
+                    print(f"Navegando para página {page_number + 1}...")
+                    next_button.click()
+                    page.wait_for_load_state('networkidle')
+                    time.sleep(3)
+                    page_number += 1
+                else:
+                    print("Não há mais páginas, finalizando...")
+                    break
+            except Exception as e:
+                print(f"Erro ao buscar próxima página: {e}")
+                break
 
-            print("\nAUTOMACAO_CONCLUIDA")
+        print(f"\n{'='*50}")
+        print(f"RESUMO DA AUTOMAÇÃO:")
+        print(f"Total de downloads realizados: {total_downloads}")
+        print(f"Total de datasets processados: {len(datasets_processados)}")
+        print(f"Pasta de destino: {downloads_dir}")
+        print(f"{'='*50}")
 
-        except Exception as e:
-            print(f"\nErro durante execução: {str(e)}")
-            import traceback
-            traceback.print_exc()
-
-        finally:
-            time.sleep(2)
-            browser.close()
+        browser.close()
+        print("\nAUTOMACAO_CONCLUIDA")
 
 if __name__ == "__main__":
-    download_all_csvs()
+    main()

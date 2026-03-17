@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 automator.log
 _tmp_*.py
+screenshots/

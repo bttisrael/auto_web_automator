@@ -1,0 +1,164 @@
+{
+  "home": {
+    "descricao_pagina": "P\u00e1gina inicial do portal de Dados Abertos de Curitiba com um modal de boas-vindas sobreposto. O modal oferece um tutorial para novos usu\u00e1rios navegarem pelo portal.",
+    "elementos_relevantes_para_tarefa": [
+      {
+        "tipo": "link",
+        "texto_visivel": "Conjuntos de Dados",
+        "localizacao": "topo",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "botao",
+        "texto_visivel": "Pr\u00f3ximo",
+        "localizacao": "centro",
+        "relevancia": "media"
+      },
+      {
+        "tipo": "botao",
+        "texto_visivel": "Pular tutorial",
+        "localizacao": "centro",
+        "relevancia": "media"
+      },
+      {
+        "tipo": "botao",
+        "texto_visivel": "\u00d7",
+        "localizacao": "centro",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "checkbox",
+        "texto_visivel": "N\u00e3o mostrar novamente.",
+        "localizacao": "centro",
+        "relevancia": "baixa"
+      }
+    ],
+    "seletores_sugeridos": [
+      {
+        "descricao": "Bot\u00e3o para fechar o modal",
+        "seletor_css": "button.close, .modal button[aria-label='Close']",
+        "alternativa_texto": "text=\u00d7"
+      },
+      {
+        "descricao": "Link para Conjuntos de Dados",
+        "seletor_css": "a[href*='conjuntos'], nav a:has-text('Conjuntos de Dados')",
+        "alternativa_texto": "text=Conjuntos de Dados"
+      },
+      {
+        "descricao": "Bot\u00e3o pular tutorial",
+        "seletor_css": "button:has-text('Pular tutorial')",
+        "alternativa_texto": "text=Pular tutorial"
+      }
+    ],
+    "fluxo_visual_sugerido": [
+      "Fechar o modal de boas-vindas clicando no 'X' ou 'Pular tutorial'",
+      "Clicar no menu 'Conjuntos de Dados' no topo da p\u00e1gina",
+      "Navegar pela lista de datasets dispon\u00edveis",
+      "Identificar e baixar os arquivos CSV de cada conjunto de dados"
+    ],
+    "alertas_visuais": [
+      "Modal de boas-vindas apareceu sobrepondo o conte\u00fado principal"
+    ],
+    "tem_paginacao_visivel": false,
+    "tem_botao_download_visivel": false
+  },
+  "subpagina_1": {
+    "descricao_pagina": "P\u00e1gina de conjunto de dados do portal de dados abertos de Curitiba, mostrando um modal de detalhe sobre 'Assist\u00eancia Financeira Complementar Do Piso Salarial Da Enfermagem' com informa\u00e7\u00f5es sobre arquivos dispon\u00edveis. A p\u00e1gina possui 32 resultados e filtros laterais por tags e secretarias.",
+    "elementos_relevantes_para_tarefa": [
+      {
+        "tipo": "modal",
+        "texto_visivel": "Detalhe do conjunto de dados",
+        "localizacao": "centro",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "botao",
+        "texto_visivel": "Pular tutorial",
+        "localizacao": "centro-modal",
+        "relevancia": "media"
+      },
+      {
+        "tipo": "botao",
+        "texto_visivel": "X (fechar)",
+        "localizacao": "topo-modal",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "texto",
+        "texto_visivel": "Arquivos dispon\u00edveis:",
+        "localizacao": "centro-modal",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "texto",
+        "texto_visivel": "Publicado em: 04/10/2025 \u2022 268 visualiza\u00e7\u00f5es",
+        "localizacao": "centro-modal",
+        "relevancia": "media"
+      },
+      {
+        "tipo": "link",
+        "texto_visivel": "Assist\u00eancia Financeira Complementar Do Piso Salarial Da Enfermagem",
+        "localizacao": "centro-modal",
+        "relevancia": "alta"
+      },
+      {
+        "tipo": "input",
+        "texto_visivel": "Campo de pesquisa",
+        "localizacao": "topo",
+        "relevancia": "media"
+      },
+      {
+        "tipo": "lista",
+        "texto_visivel": "Tags (COVID-19, Cultura, Financeiro, etc)",
+        "localizacao": "lateral-esquerda",
+        "relevancia": "baixa"
+      },
+      {
+        "tipo": "lista",
+        "texto_visivel": "Secretarias (COHAB, FCC, IMAP, etc)",
+        "localizacao": "lateral-esquerda",
+        "relevancia": "baixa"
+      }
+    ],
+    "seletores_sugeridos": [
+      {
+        "descricao": "Bot\u00e3o fechar modal",
+        "seletor_css": "button[aria-label='Close'], .modal button:has(svg)",
+        "alternativa_texto": "text=\u00d7"
+      },
+      {
+        "descricao": "T\u00edtulo do dataset no modal",
+        "seletor_css": ".modal h1, .modal h2",
+        "alternativa_texto": "text=Assist\u00eancia Financeira"
+      },
+      {
+        "descricao": "Link do card de dataset",
+        "seletor_css": "a[href*='conjunto']",
+        "alternativa_texto": ""
+      },
+      {
+        "descricao": "Todos os cards de resultados",
+        "seletor_css": ".card, article",
+        "alternativa_texto": ""
+      },
+      {
+        "descricao": "Se\u00e7\u00e3o de arquivos dispon\u00edveis",
+        "seletor_css": "text=Arquivos dispon\u00edveis",
+        "alternativa_texto": ""
+      }
+    ],
+    "fluxo_visual_sugerido": [
+      "Fechar o modal atual clicando no X ou fora do modal",
+      "Navegar pelos 32 resultados da p\u00e1gina e clicar em cada card de dataset",
+      "Dentro de cada dataset, localizar a se\u00e7\u00e3o 'Arquivos dispon\u00edveis' e baixar os arquivos CSV",
+      "Verificar se h\u00e1 pagina\u00e7\u00e3o para acessar mais resultados al\u00e9m dos exibidos",
+      "Repetir o processo para todos os datasets dispon\u00edveis no portal"
+    ],
+    "alertas_visuais": [
+      "Modal aberto bloqueando visualiza\u00e7\u00e3o da lista completa",
+      "Tutorial dispon\u00edvel (bot\u00e3o 'Pular tutorial' vis\u00edvel)"
+    ],
+    "tem_paginacao_visivel": false,
+    "tem_botao_download_visivel": false
+  }
+}
