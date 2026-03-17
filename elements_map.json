@@ -1,0 +1,610 @@
+{
+  "url": "https://dadosabertos.curitiba.pr.gov.br/",
+  "task": "quero baixar todos os csv's do site",
+  "static": {
+    "forms": [
+      {
+        "action": "/conjuntodado/",
+        "method": "post",
+        "id": "",
+        "class": [
+          "col-12",
+          "busca"
+        ],
+        "inputs": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "termo",
+            "id": "",
+            "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
+            "class": [
+              "form-control",
+              "form-control-lg"
+            ],
+            "required": false
+          },
+          {
+            "tag": "input",
+            "type": "hidden",
+            "name": "__RequestVerificationToken",
+            "id": "",
+            "placeholder": "",
+            "class": [],
+            "required": false
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "button",
+        "type": "button",
+        "text": "",
+        "id": "",
+        "class": [
+          "navbar-toggler"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "submit",
+        "text": "Buscar",
+        "id": "",
+        "class": [
+          "btn",
+          "ms-3",
+          "px-5",
+          "form-control-lg"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "",
+        "id": "",
+        "class": [
+          "closeTut"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Pular tutorial",
+        "id": "",
+        "class": [
+          "btn",
+          "btn-outline-success"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Pr\u00f3ximo",
+        "id": "",
+        "class": [
+          "btn",
+          "ms-2"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "",
+        "id": "",
+        "class": [
+          "closeTut"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Voltar",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Pr\u00f3ximo",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "",
+        "id": "",
+        "class": [
+          "closeTut"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Voltar",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Pr\u00f3ximo",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "",
+        "id": "",
+        "class": [
+          "closeTut"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Voltar",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Pr\u00f3ximo",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "",
+        "id": "",
+        "class": [
+          "closeTut"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Voltar",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      },
+      {
+        "tag": "button",
+        "type": "",
+        "text": "Fechar",
+        "id": "",
+        "class": [
+          "btn"
+        ],
+        "name": ""
+      }
+    ],
+    "links": [
+      {
+        "text": "/dadosabertos",
+        "href": "/",
+        "id": ""
+      },
+      {
+        "text": "In\u00edcio",
+        "href": "/",
+        "id": ""
+      },
+      {
+        "text": "Conjuntos de Dados",
+        "href": "/conjuntodado",
+        "id": ""
+      },
+      {
+        "text": "Canal de D\u00favidas",
+        "href": "/canalduvidas",
+        "id": ""
+      },
+      {
+        "text": "Sobre a Pol\u00edtica",
+        "href": "/sobreapolitica",
+        "id": ""
+      },
+      {
+        "text": "Login",
+        "href": "/ecidadao/entrar/",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "https://conecta.curitiba.pr.gov.br/consulta-publica---dados-abertos/login",
+        "id": ""
+      },
+      {
+        "text": "(5)Clique EconomiaSMSANBase de dados do Programa \"Clique Eco",
+        "href": "/conjuntodado/detalhe/?chave=245ef1b9-f82a-42ed-a711-1dec4ccd4be1",
+        "id": ""
+      },
+      {
+        "text": "(5)Sistema Integrado de Atendimento ao Cidad\u00e3o - SIAC 156SGM",
+        "href": "/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530",
+        "id": ""
+      },
+      {
+        "text": "(5)Base de Alvar\u00e1sSMFRela\u00e7\u00e3o de alvar\u00e1s para libera\u00e7\u00e3o de at",
+        "href": "/conjuntodado/detalhe/?chave=be211e1f-cff5-44cb-9aaa-1be6b9ec3811",
+        "id": ""
+      },
+      {
+        "text": "(5)Base de receitas e despesasSMFReceitas: Todos os recursos",
+        "href": "/conjuntodado/detalhe/?chave=5ddffbe8-313b-4d94-a862-73ab74b3817c",
+        "id": ""
+      },
+      {
+        "text": "(5)Rela\u00e7\u00f5es de servidores, cargos e encargosSMGPRela\u00e7\u00e3o de d",
+        "href": "/conjuntodado/detalhe/?chave=cb9cbeb2-1c2c-48ba-a632-25edcb766744",
+        "id": ""
+      },
+      {
+        "text": "(5)Unidades de Atendimento de Curitiba - AtivasIPPUCBase com",
+        "href": "/conjuntodado/detalhe/?chave=680ed5ed-c8b7-4e81-a2af-637d2757027a",
+        "id": ""
+      },
+      {
+        "text": "Veja Mais",
+        "href": "/ConjuntoDado",
+        "id": ""
+      },
+      {
+        "text": "O que s\u00e3o Dados Abertos?",
+        "href": "/informacoes/dadosabertos/7",
+        "id": ""
+      },
+      {
+        "text": "Tutorial de uso da Plataforma",
+        "href": "/informacoes/tutorial",
+        "id": ""
+      },
+      {
+        "text": "Regras de utiliza\u00e7\u00e3o",
+        "href": "/informacoes/regrasutilizacao/5",
+        "id": ""
+      },
+      {
+        "text": "Perguntas frequentes",
+        "href": "/informacoes/perguntasfrequentes",
+        "id": ""
+      },
+      {
+        "text": "Veja Mais",
+        "href": "/Informacoes",
+        "id": ""
+      },
+      {
+        "text": "Fechar",
+        "href": "javascript:void(0);",
+        "id": ""
+      },
+      {
+        "text": "Fechar",
+        "href": "javascript:void(0);",
+        "id": ""
+      },
+      {
+        "text": "Fechar",
+        "href": "javascript:void(0);",
+        "id": ""
+      },
+      {
+        "text": "Fechar",
+        "href": "javascript:void(0);",
+        "id": ""
+      },
+      {
+        "text": "Fechar",
+        "href": "javascript:void(0);",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "//facebook.com/PrefsCuritiba/",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "//twitter.com/curitiba_pmc/",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "//instagram.com/curitiba_pmc/",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "//youtube.com/channel/UCmRMAq8g3xlCsauCZpzYGgg",
+        "id": ""
+      },
+      {
+        "text": "",
+        "href": "//open.spotify.com/user/1vl2d2e3vvwrv28xsgub8ydiy/",
+        "id": ""
+      }
+    ],
+    "all_inputs": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "termo",
+        "id": "",
+        "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
+        "class": "['form-control', 'form-control-lg']"
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "__RequestVerificationToken",
+        "id": "",
+        "placeholder": "",
+        "class": ""
+      },
+      {
+        "tag": "input",
+        "type": "checkbox",
+        "name": "chkNaoMostrarTutorial",
+        "id": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "['chkNaoMostrarTutorial']"
+      },
+      {
+        "tag": "input",
+        "type": "checkbox",
+        "name": "chkNaoMostrarTutorial",
+        "id": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "['chkNaoMostrarTutorial']"
+      },
+      {
+        "tag": "input",
+        "type": "checkbox",
+        "name": "chkNaoMostrarTutorial",
+        "id": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "['chkNaoMostrarTutorial']"
+      },
+      {
+        "tag": "input",
+        "type": "checkbox",
+        "name": "chkNaoMostrarTutorial",
+        "id": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "['chkNaoMostrarTutorial']"
+      },
+      {
+        "tag": "input",
+        "type": "checkbox",
+        "name": "chkNaoMostrarTutorial",
+        "id": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "['chkNaoMostrarTutorial']"
+      }
+    ]
+  },
+  "dynamic": {
+    "inputs": [
+      {
+        "type": "text",
+        "id": "",
+        "name": "termo",
+        "placeholder": "Pesquise bases de dados, nome de autores e outros mais",
+        "class": "form-control form-control-lg",
+        "visible": true,
+        "aria_label": "busca",
+        "data_testid": ""
+      },
+      {
+        "type": "checkbox",
+        "id": "chkNaoMostrarTutorial",
+        "name": "chkNaoMostrarTutorial",
+        "placeholder": "",
+        "class": "chkNaoMostrarTutorial",
+        "visible": true,
+        "aria_label": "",
+        "data_testid": ""
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Contraste +",
+        "id": "ma-contrasteItem",
+        "class": "ma-item-Contraste ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Links destacados",
+        "id": "ma-linksDestacadosItem",
+        "class": "ma-item-linksDestacados ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Cursor",
+        "id": "ma-cursorItem",
+        "class": "ma-item-cursor ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Barra de ferramentas",
+        "id": "ma-barraFerramentasItem",
+        "class": "ma-item-barraFerramentas ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Dislexia Amig\u00e1vel",
+        "id": "ma-dislexiaItem",
+        "class": "ma-item-dislexia ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Texto maior",
+        "id": "ma-textoMaiorItem",
+        "class": "ma-item-textoMaior ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Espa\u00e7amento de texto",
+        "id": "ma-espacamentoTextoItem",
+        "class": "ma-item-espacamentoTexto ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Altura da linha",
+        "id": "ma-alturaLinhaItem",
+        "class": "ma-item-alturaLinha ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Alinhamento de\ntexto",
+        "id": "ma-alinhamentoTextoItem",
+        "class": "ma-item-alinhamentoTexto ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Leitor de tela",
+        "id": "ma-lerPaginaItem",
+        "class": "ma-item-lerPagina ma-selected",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Reiniciar tudo",
+        "id": "ma-btReiniciar",
+        "class": "ma-fechar",
+        "type": "button",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Buscar",
+        "id": "",
+        "class": "btn ms-3 px-5 form-control-lg",
+        "type": "submit",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "",
+        "id": "",
+        "class": "closeTut",
+        "type": "submit",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Pular tutorial",
+        "id": "",
+        "class": "btn btn-outline-success",
+        "type": "submit",
+        "aria_label": "",
+        "data_testid": ""
+      },
+      {
+        "text": "Pr\u00f3ximo",
+        "id": "",
+        "class": "btn ms-2",
+        "type": "submit",
+        "aria_label": "",
+        "data_testid": ""
+      }
+    ],
+    "links": [],
+    "selects": [],
+    "iframes": [],
+    "modals": [],
+    "page_title": "P\u00e1gina Inicial - Dados Abertos",
+    "url_atual": "https://dadosabertos.curitiba.pr.gov.br/"
+  },
+  "metadata": {
+    "title": "P\u00e1gina Inicial - Dados Abertos",
+    "description": "",
+    "tecnologias": [
+      "jquery",
+      "bootstrap"
+    ],
+    "screenshot": "C:\\Users\\israb\\Documents\\Agente_RPA\\page_screenshot.png",
+    "url_final": "https://dadosabertos.curitiba.pr.gov.br/"
+  },
+  "ia_analise": {
+    "biblioteca_recomendada": "playwright",
+    "justificativa": "Playwright \u00e9 superior para este caso pois o site utiliza jQuery e Bootstrap com conte\u00fado din\u00e2mico. Possui melhor suporte para esperar elementos carregados via JS, intercepta\u00e7\u00e3o de requisi\u00e7\u00f5es de rede para capturar URLs dos CSVs, e \u00e9 mais est\u00e1vel para download de m\u00faltiplos arquivos",
+    "estrategia": "1) Acessar a p\u00e1gina principal e aguardar carregamento completo; 2) Identificar todos os conjuntos de dados atrav\u00e9s de links ou cards na p\u00e1gina; 3) Para cada conjunto, acessar a p\u00e1gina de detalhes; 4) Localizar e extrair URLs dos arquivos CSV (podem estar em bot\u00f5es de download ou links diretos); 5) Implementar loop para navegar por todas as p\u00e1ginas de datasets se houver pagina\u00e7\u00e3o; 6) Realizar download program\u00e1tico dos CSVs ou coletar URLs e baixar via requests; 7) Organizar arquivos baixados com nomenclatura apropriada",
+    "elementos_chave": [
+      "form.busca[action='/conjuntodado/']",
+      "input[name='termo']",
+      "a[href*='csv'], button[download], a[download]",
+      "links para p\u00e1ginas de datasets individuais",
+      "elementos de pagina\u00e7\u00e3o (se existirem)",
+      "bot\u00f5es ou links com texto 'Download', 'CSV', 'Baixar'"
+    ],
+    "alertas": [
+      "Pagina\u00e7\u00e3o din\u00e2mica pode exigir cliques ou scroll infinito",
+      "CSVs podem estar dentro de p\u00e1ginas de detalhes individuais, n\u00e3o na listagem principal",
+      "Poss\u00edvel limite de rate limiting para m\u00faltiplos downloads",
+      "Arquivos podem ter nomes gen\u00e9ricos, necessitando renomea\u00e7\u00e3o baseada em metadados",
+      "Token CSRF presente (__RequestVerificationToken) pode ser necess\u00e1rio para algumas intera\u00e7\u00f5es"
+    ],
+    "complexidade": "media"
+  }
+}
